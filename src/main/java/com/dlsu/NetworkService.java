@@ -1,5 +1,7 @@
 package com.dlsu;
 
+import org.jgrapht.GraphPath;
+import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.graph.DefaultEdge;
 
 import java.util.List;
@@ -24,7 +26,10 @@ public class NetworkService {
         return network.getFriendsOf(id);
     }
 
-    public List<DefaultEdge> findPath(int id1, int id2) {
-        return network.findPath(id1, id2);
+    public GraphPath<Integer, DefaultEdge> findPath(int id1, int id2) {
+        DijkstraShortestPath<Integer, DefaultEdge> dijkstraAlg =
+                new DijkstraShortestPath<>(network.getGraph()); // assuming `network.getGraph()` returns your graph object
+        return dijkstraAlg.getPath(id1, id2);
     }
 }
+
