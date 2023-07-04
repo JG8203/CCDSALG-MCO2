@@ -41,10 +41,12 @@ public class ConsoleService {
     }
 
     public void displayConnectionPath(int id1, int id2, Graph<Integer, DefaultEdge> graph) {
+    //the function prototype above should only get the path (From the network service class) and display the source/dest of each edge but teh getSource and getTarget methods are deprecated.
         if(graph != null) {
             System.out.println("There is a connection from " + id1 + " to " + id2 + "!");
             Set<DefaultEdge> edges = graph.edgeSet();
             for(DefaultEdge edge : edges) {
+                //line below should be replaced.
                 System.out.println(graph.getEdgeSource(edge) + " is friends with " + graph.getEdgeTarget(edge));
             }
         } else {
