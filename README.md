@@ -99,12 +99,6 @@ Enter your choice: 3
 Good luck!
 
 ## Project Checklist
-### Data Analysis
-
-- [ ] Understand the provided social graph dataset.
-- [ ] Analyze the data's structure and format.
-- [ ] Discuss and decide on the appropriate data structure for representing the graph in the program.
-
 ### Software Development 
 
 #### Part 1: Loading the Graph
