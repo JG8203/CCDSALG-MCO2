@@ -1,8 +1,8 @@
 package com.dlsu;
 
-import org.jgrapht.graph.DefaultEdge;
-
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class NetworkService {
     private final Network network;
@@ -20,11 +20,12 @@ public class NetworkService {
         }
     }
 
-    public List<Integer> getFriendsOf(int id) {
+    public Set<Integer> getFriendsOf(int id) {
         return network.getFriendsOf(id);
     }
 
-    public List<DefaultEdge> findPath(int id1, int id2) {
-        return network.findPath(id1, id2);
+    public List<Integer> findPath(int start, int goal) {
+        Map<Integer, Integer> parentMap = network.getGraph().breadthFirstSearch(start);
+        return network.getGraph().reconstructPath(start, goal, parentMap);
     }
 }

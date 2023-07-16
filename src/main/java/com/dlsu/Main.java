@@ -1,8 +1,7 @@
 package com.dlsu;
 
-// import org.jgrapht.graph.DefaultEdge;
-
 import java.util.List;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,13 +17,14 @@ public class Main {
             switch(choice){
                 case 1:
                     int id = consoleService.promptPersonID();
-                    List<Integer> friends = networkService.getFriendsOf(id);
+                    Set<Integer> friends = networkService.getFriendsOf(id);
                     consoleService.displayFriendsList(id, friends);
                     break;
                 case 2:
                     int id1 = consoleService.promptPersonID();
                     int id2 = consoleService.promptPersonID();
-                    // TODO: Deprecated getEdge and getSource methods doon sa isang method. Fix sa actual impl.
+                    List<Integer> path = networkService.findPath(id1, id2);
+                    consoleService.displayConnectionPath(id1, id2, path);
                     break;
             }
             choice = consoleService.promptMenuOption();

@@ -1,8 +1,5 @@
 package com.dlsu;
 
-import org.jgrapht.Graph;
-import org.jgrapht.graph.DefaultEdge;
-
 import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
@@ -15,7 +12,7 @@ public class ConsoleService {
     }
 
     public String promptFilePath() {
-        System.out.printf("Input file path: ");
+        System.out.print("Input file path: ");
         return scanner.nextLine();
     }
 
@@ -28,10 +25,11 @@ public class ConsoleService {
     }
 
     public int promptPersonID() {
-        System.out.println("Enter ID of Person: ");
+        System.out.print("Enter ID of Person: ");
         return scanner.nextInt();
     }
-    public void displayFriendsList(int id, List<Integer> friends) {
+
+    public void displayFriendsList(int id, Set<Integer> friends) {
         System.out.println("Person " + id + " has " + friends.size() + " friends!");
         System.out.println("List of friends: ");
         for(Integer friend : friends){
@@ -40,17 +38,14 @@ public class ConsoleService {
         System.out.println("");
     }
 
-    public void displayConnectionPath(int id1, int id2, Graph<Integer, DefaultEdge> graph) {
-    //the function prototype above should only get the path (From the network service class) and display the source/dest of each edge but teh getSource and getTarget methods are deprecated.
-        if(graph != null) {
-            System.out.println("There is a connection from " + id1 + " to " + id2 + "!");
-            Set<DefaultEdge> edges = graph.edgeSet();
-            for(DefaultEdge edge : edges) {
-                //line below should be replaced.
-                System.out.println(graph.getEdgeSource(edge) + " is friends with " + graph.getEdgeTarget(edge));
+    public void displayConnectionPath(int start, int goal, List<Integer> path) {
+        if(!path.isEmpty()) {
+            System.out.println("There is a connection from " + start + " to " + goal + "!");
+            for (int i = 0; i < path.size() - 1; i++) {
+                System.out.println(path.get(i) + " is friends with " + path.get(i + 1));
             }
         } else {
-            System.out.println("Cannot find a connection between " + id1 + " and " + id2);
+            System.out.println("Cannot find a connection between " + start + " and " + goal);
         }
     }
 }
