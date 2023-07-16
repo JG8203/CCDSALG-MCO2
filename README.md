@@ -17,8 +17,8 @@ This is the second major course output for the course "Data Structures and Algor
 
 ## Deliverables Checklist
 
-- [ ] Source.zip file containing a folder called `source`, which includes all source codes for the project
-- [ ] A PDF file named `report.pdf`, which contains the project report
+- [x] Source.zip file containing a folder called `source`, which includes all source codes for the project
+- [x] A PDF file named `report.pdf`, which contains the project report
 
 ## Project Specifications
 
@@ -108,22 +108,22 @@ Good luck!
 ### Software Development 
 
 #### Part 1: Loading the Graph
-- [ ] Write a function to read the file containing the social network data.
-- [ ] Ensure the function can accept as input the file name or file path.
-- [ ] Write a function to convert the data into a graph representation.
-- [ ] Make sure the function is capable of handling up to 5000 accounts in a single network.
-- [ ] Test loading the graph with example data (Caltech36, Rice31, and Trinity100).
-- [ ] Implement a menu for user interaction.
+- [x] Write a function to read the file containing the social network data.
+- [x] Ensure the function can accept as input the file name or file path.
+- [x] Write a function to convert the data into a graph representation.
+- [x] Make sure the function is capable of handling up to 5000 accounts in a single network.
+- [x] Test loading the graph with example data (Caltech36, Rice31, and Trinity100).
+- [x] Implement a menu for user interaction.
 
 #### Part 2: Display Friend List
-- [ ] Write a function that accepts an ID and displays the corresponding friend list.
+- [x] Write a function that accepts an ID and displays the corresponding friend list.
 - [ ] Ensure the function displays an error message if the ID doesn't exist.
-- [ ] Test the function with different ID inputs.
+- [x] Test the function with different ID inputs.
 
 #### Part 3: Display Connections
-- [ ] Write a function that accepts two IDs and displays the connection between them.
+- [x] Write a function that accepts two IDs and displays the connection between them.
 - [ ] Ensure the function displays an error message if one or both IDs don't exist.
-- [ ] Test the function with different pairs of ID inputs.
+- [x] Test the function with different pairs of ID inputs.
 
 ### Report Writing
 
@@ -150,8 +150,3 @@ Good luck!
 - [ ] Submit both the source.zip and report.pdf files on AnimoSpace.
 - [ ] Ensure the files are named in the correct format: CCDSALG-MCO2-Section-GroupNumber.zip
 - [ ] Submit before the deadline: July 31, 2023, 08:00 AM.
-
-### Post-Submission
-
-- [ ] Each group member should be familiar with the entire project for potential queries from the instructor.
-- [ ] Await feedback or grade from the instructor.
