@@ -111,12 +111,12 @@ Good luck!
 
 #### Part 2: Display Friend List
 - [x] Write a function that accepts an ID and displays the corresponding friend list.
-- [ ] Ensure the function displays an error message if the ID doesn't exist.
+- [x] Ensure the function displays an error message if the ID doesn't exist.
 - [x] Test the function with different ID inputs.
 
 #### Part 3: Display Connections
 - [x] Write a function that accepts two IDs and displays the connection between them.
-- [ ] Ensure the function displays an error message if one or both IDs don't exist.
+- [x] Ensure the function displays an error message if one or both IDs don't exist.
 - [x] Test the function with different pairs of ID inputs.
 
 ### Report Writing
