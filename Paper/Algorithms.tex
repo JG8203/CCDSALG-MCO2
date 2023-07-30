@@ -1,0 +1,75 @@
+\section*{\textbf{Algorithms}}
+\addcontentsline{toc}{chapter}{Algorithms}
+
+\subsection*{\textbf{HashMap and HashSet}}
+\addcontentsline{toc}{section}{HashMap and HashSet}
+In our implementation, we utilized two prominent data structures from the \textit{Java Standard Library}: \textit{\textbf{HashMap}} and \textit{\textbf{HashSet}}. Both data structures are known for their high performance in numerous data manipulation operations. 
+
+A \textit{\textbf{HashMap}} is an implementation of a \textit{\textbf{Map}}, storing key-value pairs analogous to a dictionary. One of its main advantages is efficiency in lookup operations, such as \textit{put}, \textit{get}, \textit{contains}, and \textit{remove}, each executing in $\mathbf{O(1)}$ time complexity.
+
+In our adjacency list, each user is stored as a key, and their corresponding friends are stored within a \textit{\textbf{HashSet}}. \textit{\textbf{HashSet}}, which internally uses a \textit{\textbf{HashMap}}, also offers $\mathbf{O(1)}$ time complexity for basic operations. It does not allow duplicate elements, an important feature because a “friendship” between two nodes is represented by an undirected graph. This design prevents “duplicate” relationships within the adjacency list.\cite{bajracharya}
+
+\subsection*{\textbf{Finding Adjacent Nodes}}
+\addcontentsline{toc}{section}{Finding Adjacent Nodes}
+\begin{lstlisting}
+public Set<Integer> getFriendsOf(int id) {
+    return adjacencyList.get(id);
+}
+\end{lstlisting}
+The nodes adjacent to a given user were retrieved using a simple lookup within the \textit{\textbf{HashMap}}-based adjacency list. The adjacency list stores each node as a key and its associated friends as a value set. When a list of a user's friends is requested, the \textit{get()} method is invoked.
+
+\subsection*{\textbf{Breadth First Search}}
+\addcontentsline{toc}{section}{Breadth First Search}
+\begin{lstlisting}
+public Map<Integer, Integer> breadthFirstSearch(int start) {
+    Map<Integer, Integer> parentMap = new HashMap<>();
+    Queue<Integer> queue = new LinkedList<>();
+    Set<Integer> visited = new HashSet<>();
+
+    queue.add(start);
+    visited.add(start);
+    parentMap.put(start, null); 
+
+    while (!queue.isEmpty()) {
+      int current = queue.poll();
+      for (int neighbor : getNeighbors(current)) {
+        if (!visited.contains(neighbor)) {
+          queue.add(neighbor);
+          visited.add(neighbor);
+          parentMap.put(neighbor, current);
+        }
+      }
+    }
+    return parentMap;
+}
+\end{lstlisting}
+To discover the path between two users within the network, we employed \textit{\textbf{Breadth-First Search (BFS)}}. The BFS algorithm traverses the graph breadthwise and uses a queue to keep track of the nodes to visit next. The algorithm begins from the node representing the user and visits the user’s “friends” before advancing to the friends of friends. Our implementation is congruent to the one presented by Cormen, Leiserson, Rivest, and Stein (CLRS)\cite{cormen2001introduction}. A parent map is also maintained, wherein each newly-discovered node is stored. 
+
+We selected BFS over Depth-First Search (DFS) because our goal was to find the shortest path between two nodes, not all possible paths. Also, despite its capability to find the shortest path, BFS was chosen over Dijkstra’s Algorithm due to the absence of “weights” between the edges of two nodes.\cite{sedgewick2011algorithms}
+
+\subsection*{\textbf{Path Reconstruction}}
+\addcontentsline{toc}{section}{Path Reconstruction}
+\begin{lstlisting}
+public List<Integer> reconstructPath(int start, 
+    int goal, Map<Integer, Integer> parentMap) {
+    
+    List<Integer> path = new ArrayList<>();
+    Integer currentNode = goal;
+
+    while (currentNode != null) {
+        path.add(currentNode);
+        currentNode = parentMap.get(currentNode);
+    }
+
+    Collections.reverse(path);
+
+    if (!path.get(0).equals(start)) {
+        return new ArrayList<>();
+    }
+
+    return path;
+}
+\end{lstlisting}
+With the help of the parent map, the program can backtrack from the target user to the source. This process is carried out using the \textit{\textbf{reconstructPath()}} method. The method starts from the target node and moves to the parent of the current node. This process is iteratively performed until the source node is reached.
+
+Upon building the path, it is reversed to obtain the path from the source to the target node. If the first node in the reversed path does not match the starting node, an empty list is returned. This strategy allows the algorithm to effectively identify the shortest path between the source and target nodes.\cite{simic_tracing_2023}

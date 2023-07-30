@@ -1,0 +1,86 @@
+\section*{\textbf{Program Operations}}
+\addcontentsline{toc}{chapter}{Program Operations}
+
+\lstset{basicstyle=\ttfamily}
+\begin{lstlisting}[label=verb1,caption={A Sample Run of the Program},frame=tb]
+Input file path: ./data/Caltech36.txt
+[1] Get friend list
+[2] Get connection
+[3] Exit
+Enter your choice: 1
+Enter ID of Person: 10
+Person 10 has 2 friends!
+List of friends:
+341 663
+[1] Get friend list
+[2] Get connection
+[3] Exit
+Enter your choice: 2
+Enter ID of Person: 10
+Enter ID of Person: 20
+There is a connection from 10 to 20!
+10 is friends with 341
+341 is friends with 686
+686 is friends with 20
+[1] Get friend list
+[2] Get connection
+[3] Exit
+Enter your choice: 3
+\end{lstlisting}
+
+\subsection*{\textbf{Loading a Dataset}}
+\addcontentsline{toc}{section}{Loading a Dataset}
+When the user asks the program to load a dataset, it begins a multi-step process that involves reading the file, parsing its contents, and creating the graph using the parsed data.
+
+\begin{enumerate}
+	\item \textbf{File Selection and Opening}
+	The process begins when the user inputs the path of the file. This integers represent two people who are friends with one another. The FileReader creates a Relationship object for each pair of integers and adds it to a list of relationships.
+	
+	\item \textbf{Building the Network Graph}
+	After all relationships have been read from the file and added to the list, the FileReader returns this list to the loadRelationships method of the NetworkService class. This method then iterates over the list then adds each relationship to the Network object. This is accomplieshed by invoking the addRelationship method of the Network class. The add Relationship method adds each person from the relationship as a node in the graph, if they're not already in the graph. Then, it adds an edge (relationship) between them.
+	
+	\item \textbf{Completion of Network Loading}
+	After all relationships from the file have been added to the network, the graph is fully constructed. The application is now prepared to perform operations based on the user's choices, such as finding a person's list of friends or finding a path of connections between two people.
+	
+	\end{enumerate}
+	
+\subsection*{\textbf{List Friends of a Person}}
+\addcontentsline{toc}{section}{List Friends of a Person}
+If the user selects the first option on the menu, the application proceeds to list the friends of a person. The user is prompted to enter an ID. This ID is passed to the getFriendsOf method of the NetworkService class which uses the getNeighbors method of the Graph class to fetch all the friends of the person with the given ID. These friends are represented as a set of IDs.
+The displayFriendsList method of the ConsoleService class then prints the list of friends to the console.
+
+\subsection*{\textbf{Path of Connection Between Two People}}
+\addcontentsline{toc}{section}{Path of Connection Between Two People}
+
+When a user selects the second option, the application is tasked with finding a path of connections between two individuals within the network.
+
+The user is asked to input two IDs, which represent the two individuals for whom a path is constructed. The \texttt{promptPersonID} method of the \texttt{ConsoleService} class is invoked twice to get two IDs. The IDs \texttt{id1} and \texttt{id2} are then passed to the \texttt{findPath} method of the \texttt{NetworkService} class.
+
+The \texttt{findPath} method uses BFS to find the shortest path between the two individuals. BFS is a traversal algorithm that explores the graph in layers starting from the source node.
+
+The BFS algorithm starts by initializing the following data structures:
+\begin{itemize}
+	\item A queue, which will hold the nodes to be explored.
+	\item A visited set, which keeps track of nodes that have been explored to avoid re-exploration.
+	\item A parentMap, which records the parent-child relationships between nodes.
+\end{itemize}
+
+The process begins by adding the starting node to both the queue and the visited set. It also adds the starting node to the parentMap, with its parent set as \texttt{null}.
+
+Next, the BFS enters a loop that continues until the queue is empty. If the queue is already empty, then it signifies that all reachable nodes have been explored. Each iteration of the loop dequeues a node from the front of the queue. For each neighbor of this current node that has not been visited yet, it does the following:
+\begin{itemize}
+	\item Add the neighbor to the queue, marking it for future exploration.
+	\item Add the neighbor to the visited set, which marks it as discovered.
+	\item Set the current node as the neighbor's parent in the parentMap. This step records the path the algorithm took to discover the neighbor.
+\end{itemize}
+
+\subsection*{\textbf{Path Reconstruction}}
+\addcontentsline{toc}{section}{Path Reconstruction}
+
+Once the BFS has been completed, the \texttt{findPath} method now has a complete parent map which it can use to reconstruct the path from the starting node to the target node. The \texttt{reconstructPath} method of the \texttt{Graph} class is then invoked.
+
+The \texttt{reconstructPath} method starts at the goal node and follows the parent pointers in the parent map all the way back to the starting node. It does this by initializing a \texttt{currentNode} variable as the goal node. It then enters a loop that continues until the \texttt{currentNode} is \texttt{null}. In each iteration, it adds the \texttt{currentNode} to a path list and then sets the current node to its parent in the parentMap.
+
+After this, the path list represents the path from the goal node to the start node, so it is then reversed so that it starts from the starting node.
+
+Finally, this method also checks if the start of the path is the start node. If it's not, this means that the start and target nodes aren't connected, and the method returns an empty list. Otherwise, it returns the path list.

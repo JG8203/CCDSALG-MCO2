@@ -1,0 +1,26 @@
+\section*{Program Design and Implementation}
+\addcontentsline{toc}{chapter}{Program Design and Implementation}
+
+\subsection*{FileReader Class}
+\addcontentsline{toc}{section}{FileReader Class}
+The FileReader Class is responsible for reading and parsing data from a file. It reads a social network dataset stored in a file, each line within this file represents a friendship between two users. The class processes each line, extracting the user IDs and creating the relationships. The FileReader class transforms raw data into a format ready for the construction of a graph.
+
+\subsection*{Graph Class}
+\addcontentsline{toc}{section}{Graph Class}
+The Graph class represents the social network as a graph structure. This class contains the adjacency list where keys are user IDs and values are a HashSet of IDs representing friendships. The HashSet ensures that duplicate edges are not added and allows for efficient look-up. The Graph class also provides methods for adding edges and performing BFS, as well as reconstructing its path.
+
+\subsection*{Edge Class}
+\addcontentsline{toc}{section}{Edge Class}
+The Edge class represents the connections in the social network graph. Each instance of this object represents a direct connection between two users. It contains two Node objects, indicating the two users involved in a relationship. The Edge class provides an object-oriented way to represent friendships within the social network.
+
+\subsection*{Network Class}
+\addcontentsline{toc}{section}{Network Class}
+The Network class is a high-level abstraction of the entire network. It contains an instance of the Graph class, which encapsulates the entire network. This class contains methods for loading data from a file, displaying a user's friend list, and finding the shortest path between two users.
+
+\subsection*{NetworkService and ConsoleService Classes}
+\addcontentsline{toc}{section}{NetworkService and ConsoleService Classes}
+The NetworkService class is the bridge between the underlying Network model and the ConsoleService view. It contains an instance of the Network class and provides methods to execute user commands on the network. The ConsoleService class is responsible for handling user interactions. It provides a command-line interface (CLI) which allows the users to interact with the social network by displaying a menu, accepting input and presenting the results of the various operations.
+
+\subsection*{Main Class}
+\addcontentsline{toc}{section}{Main Class}
+The Main class serves as the entry point of the program. It is responsible for starting the application, creating an instance of the ConsoleService and NetworkService classes. It calls the method to start the interface.

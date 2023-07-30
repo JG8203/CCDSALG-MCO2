@@ -1,0 +1,35 @@
+\contentsline {chapter}{Abstract}{3}{}%
+\contentsline {chapter}{Introduction}{4}{}%
+\contentsline {chapter}{Background}{5}{}%
+\contentsline {section}{Graph Theory and Social Networks}{5}{}%
+\contentsline {section}{Adjacency List Representation}{5}{}%
+\contentsline {section}{HashMap and HashSet Data Structures}{5}{}%
+\contentsline {section}{Breadth-First Search Algorithm}{6}{}%
+\contentsline {section}{Dataset}{6}{}%
+\contentsline {section}{Data Processing}{7}{}%
+\contentsline {chapter}{Program Design and Implementation}{9}{}%
+\contentsline {section}{FileReader Class}{9}{}%
+\contentsline {section}{Graph Class}{9}{}%
+\contentsline {section}{Edge Class}{9}{}%
+\contentsline {section}{Network Class}{9}{}%
+\contentsline {section}{NetworkService and ConsoleService Classes}{9}{}%
+\contentsline {section}{Main Class}{10}{}%
+\contentsline {chapter}{Program Operations}{11}{}%
+\contentsline {section}{Loading a Dataset}{11}{}%
+\contentsline {section}{List Friends of a Person}{12}{}%
+\contentsline {section}{Path of Connection Between Two People}{12}{}%
+\contentsline {section}{Path Reconstruction}{13}{}%
+\contentsline {chapter}{Time Complexity Analysis}{14}{}%
+\contentsline {section}{Optimizing Adjacency Lists: HashMap's get() and put()}{14}{}%
+\contentsline {section}{Breadth-First Search (BFS) Algorithm Analysis}{14}{}%
+\contentsline {subsection}{Initialization}{14}{}%
+\contentsline {subsection}{Queue Operations}{14}{}%
+\contentsline {subsection}{Adjacency List Check}{15}{}%
+\contentsline {subsection}{Final Runtime for Breadth-First Search}{15}{}%
+\contentsline {section}{Results and Discussion}{16}{}%
+\contentsline {subsection}{Normal Conditions}{16}{}%
+\contentsline {subsection}{Edge Cases}{16}{}%
+\contentsline {subsubsection}{Invalid File Path}{16}{}%
+\contentsline {subsubsection}{Invalid User ID}{17}{}%
+\contentsline {subsubsection}{Multiple Shortest Paths}{17}{}%
+\contentsline {chapter}{Conclusion}{19}{}%

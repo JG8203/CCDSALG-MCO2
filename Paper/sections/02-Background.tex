@@ -1,0 +1,43 @@
+\section*{Background}
+\addcontentsline{toc}{chapter}{Background}
+
+\subsection*{Graph Theory and Social Networks}
+\addcontentsline{toc}{section}{Graph Theory and Social Networks}
+Social networks have emerged as prominent platforms in human interaction and communication. As these networks grow in size, the need for tools to analyze them also escalates. This is where graph theory becomes invaluable. The use of graphs provides tools to represent real life individuals and entities within a social network, and their interactions in a more structured and visual manner. 
+
+The fundamental components of a graph are nodes and edges. Nodes represent individual entities within a network, while edges signify the relationships or connections between these entities. For example, in a social media platform, a node could represent an individual while an edge could indicate a friendship or connection between two individuals.
+
+\subsection*{Adjacency List Representation}
+\addcontentsline{toc}{section}{Adjacency List Representation}
+In a graph, nodes are considered adjacent if they share a common edge. In a social network, two individuals are adjacent if they have a relationship (edge) with one another. The set of all vertices adjacent to a node $v$ is often referred to as its adjacency list. 
+
+An adjacency list is a way to represent a graph where each node in the graph is associated with a list of neighboring vertices. This list is commonly referred to as the \textbf{neighbors} of $v$. The choice of using an adjacency list is a direct consequence of the nature of social media platforms. These networks are typically sparse. A sparse network means that each node is (on average) connected to only a small fraction of all other users within the network. 
+
+The use of adjacency lists are also preferred whenever most of the analysis is done using graph traversal algorithms\cite{HUMMON1990273}. In such scenarios, an adjacency list is a more space-efficient alternative to a matrix representation which requires more space that is proportional to the square number of nodes, regardless the number of edges. In our project, each user is represented as a single node in the graph. For each user within the network, we maintain a list of all other users that they are connected to. This is the user's adjacency list.
+
+\subsection*{HashMap and HashSet Data Structures}
+\addcontentsline{toc}{section}{HashMap and HashSet Data Structures}
+In Java, HashMaps and HashSets are part of the Collections Framework which provides pre-packaged data structures that we can use to manipulate data more efficiently.
+
+A HashMap stores key-value pairs, also known as entries. This is similar to how a dictionary stores the word as well as it's definition.\footnote{HashMaps in Java are equivalent to dictionaries in other programming languages, such as Python.}. Without going into much detail, a HashMap uses a technique known as hashing to determine where in the array the value for a key is stored. The key's hashcode is then used to retrieve the value. On average, this makes the retrieval time constant, as it does not depedend on the number of entries within the HashMap \footnote{Assuming there are no Hash Collisions within the HashMap. This also assumes a good hashing function was used. See Section: Time Complexity Analysis}\cite{bajracharya}
+
+In our code, we chose to use a \textbf{HashSet} to represent the adjacency list of a single user. A \textbf{HashSet} is a collection of items where each items within the set is unique. Due to the nature of a HashSet, it also provides (on average) constant time performance for basic operations. This ensures that our program can handle large datasets efficiently.
+
+When a neighbor-lookup is performed, we can simply look at the adjacency list of the user, which gives us an efficient way to access the required information. Similarly, when we want to find the path between two users, we can perform a Breadth-First Search (BFS) starting from the source user until we iteratively explore the adjacency list of each visited user until eventually, the program reaches the target user.
+
+\subsection*{Breadth-First Search Algorithm}
+\addcontentsline{toc}{section}{Breadth-First Search Algorithm}
+Breadth-First Search (BFS) is a graph traversal algorithm. It starts at a chosen source node, then explores its neighbors iteratively before moving on to their neighbors. This algorithm explores the graph in "layers" from the source node, then visiting the nodes that are a single edge away, then two edges away, and so on.
+
+One of the features of BFS is that it finds the shortes path between the source node and all other nodes. This assumes that each edge is unweighted. In the context of a social network, BFS can be used to determine the shortest path between two individuals. The BFS algorithm is implemented to find the shortest number of connections between two people within the network.
+
+\subsection*{\textbf{Dataset}}
+\addcontentsline{toc}{section}{Dataset}
+
+For this project, we used with a \textbf{real-world dataset}, derived from \textit{Facebook in 2005}. This data encapsulates the Facebook networks of numerous American colleges and universities and provides a snapshot of a single day in September 2005. In the original dataset, the user accounts were anonymized and assigned unique integer identifiers, preserving their suitability for analysis. This dataset enables the construction of a social graph that represents various accounts and the relationships formed between them. This relationship is depicted using an \textit{undirected graph}, mirroring the bidirectional nature of friendships on Facebook. \cite{traud2012social}
+However, it is important to note that the dataset has its limitations. It only represents a snapshot of the Facebook network at a single point in time. Since 2005, Facebook has grown and evolved, and so this dataset wouldn't fully reflect the current state of the network. Also, this dataset only includes data on friendships and not other types of user interactions or attributes of the user.
+
+\subsection*{\textbf{Data Processing}}
+\addcontentsline{toc}{section}{Data Processing}
+
+To facilitate processing, the original data, which was in MATLAB (.mat) format, was converted to a text (.txt) file. The first line of each file consists of two integers, $n$ and $e$, representing the \textbf{number of accounts} and \textbf{friendships} within the network, respectively. This line is followed by $e$ lines that describe the friendships between two accounts.

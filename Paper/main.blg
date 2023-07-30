@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: titlepage.aux
+A level-1 auxiliary file: sections/00-Abstract.aux
+A level-1 auxiliary file: sections/01-Introduction.aux
+A level-1 auxiliary file: sections/02-Background.aux
+A level-1 auxiliary file: sections/02-UML.aux
+A level-1 auxiliary file: sections/03-ProgramDesignAndImplementation.aux
+A level-1 auxiliary file: sections/04-ProgramOperations.aux
+A level-1 auxiliary file: sections/05-ProgramInteraction.aux
+A level-1 auxiliary file: sections/06-TimeComplexity.aux
+A level-1 auxiliary file: sections/07-ResultsAndDiscussions.aux
+A level-1 auxiliary file: sections/08-ContributionsAndLearnings.aux
+A level-1 auxiliary file: sections/09-Conclusion.aux
+A level-1 auxiliary file: sections/10-References.aux
+The style file: plain.bst
+Database file #1: references.bib
+You've used 4 entries,
+            2118 wiz_defined-function locations,
+            544 strings with 5218 characters,
+and the built_in function-call counts, 1619 in all, are:
+= -- 158
+> -- 86
+< -- 0
++ -- 35
+- -- 30
+* -- 141
+:= -- 278
+add.period$ -- 13
+call.type$ -- 4
+change.case$ -- 27
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 44
+empty$ -- 115
+format.name$ -- 30
+if$ -- 320
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 24
+num.names$ -- 8
+pop$ -- 18
+preamble$ -- 1
+purify$ -- 23
+quote$ -- 0
+skip$ -- 29
+stack$ -- 0
+substring$ -- 135
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 0
+while$ -- 15
+width$ -- 5
+write$ -- 48

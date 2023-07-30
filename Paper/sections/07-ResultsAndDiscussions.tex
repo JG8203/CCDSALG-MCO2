@@ -1,0 +1,59 @@
+\section*{Results and Discussion}
+\addcontentsline{toc}{section}{Results and Discussion}
+
+In this section, we present and discuss the results of running our application. We examine the program's performance under normal conditions and its handling of various edge cases.
+
+\subsection*{Normal Conditions}
+\addcontentsline{toc}{subsection}{Normal Conditions}
+
+Under normal conditions, our program performs exceptionally well. When given valid input, the program quickly loads the dataset and allows the user to perform operations on the network.
+
+For instance, consider the following interaction:
+
+\begin{verbatim}
+	Input file path: ./data/Caltech36.txt
+	[1] Get friend list
+	[2] Get connection
+	[3] Exit
+	Enter your choice: 1
+	Enter ID of Person: 10
+	Person 10 has 2 friends!
+	List of friends:
+	341 663
+\end{verbatim}
+
+In this example, the program correctly identified the friends of person 10 from the Caltech36 dataset. This was verified by using the application \textbf{Cytoscape} and the \textbf{PathExplorer} extension.\cite{shannon2003cytoscape}
+
+\subsection*{Edge Cases}
+\addcontentsline{toc}{subsection}{Edge Cases}
+
+The program also handles various edge cases gracefully. Here are some examples:
+
+\subsubsection{Invalid File Path}
+
+When given an invalid file path, the program displays an error message and prompts the user for a valid file path. For example:
+
+\begin{verbatim}
+	Input file path: ./data/nonexistent.txt
+	Error: File not found. Please enter a valid file path.
+	Input file path: 
+\end{verbatim}
+
+This shows that the program is robust to errors in file input, and can recover gracefully from such situations.
+
+\subsubsection{Invalid User ID}
+
+When asked to list the friends of a user who does not exist in the network, the program informs the user that the ID is invalid. For example:
+
+\begin{verbatim}
+	Enter your choice: 1
+	Enter ID of Person: 99999
+	Error: Person 99999 does not exist in the network.
+	Enter ID of Person: 
+\end{verbatim}
+
+This demonstrates the program's robust error handling capabilities and its ability to provide meaningful feedback to the user.
+
+\subsubsection{Multiple Shortest Paths}
+
+In cases where multiple shortest paths exist between two users, the program arbitrarily selects one to display. This is a result of the BFS algorithm, which does not guarantee a particular shortest path in cases where multiple shortest paths exist.
