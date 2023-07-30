@@ -13,6 +13,7 @@
 \contentsline {section}{Edge Class}{9}{}%
 \contentsline {section}{Network Class}{9}{}%
 \contentsline {section}{NetworkService and ConsoleService Classes}{9}{}%
+\contentsline {section}{Relationship Class}{10}{}%
 \contentsline {section}{Main Class}{10}{}%
 \contentsline {chapter}{Program Operations}{11}{}%
 \contentsline {section}{Loading a Dataset}{11}{}%
@@ -26,10 +27,10 @@
 \contentsline {subsection}{Queue Operations}{14}{}%
 \contentsline {subsection}{Adjacency List Check}{15}{}%
 \contentsline {subsection}{Final Runtime for Breadth-First Search}{15}{}%
-\contentsline {section}{Results and Discussion}{16}{}%
-\contentsline {subsection}{Normal Conditions}{16}{}%
-\contentsline {subsection}{Edge Cases}{16}{}%
+\contentsline {chapter}{Results and Discussion}{16}{}%
+\contentsline {section}{Normal Conditions}{16}{}%
+\contentsline {section}{Edge Cases}{16}{}%
 \contentsline {subsubsection}{Invalid File Path}{16}{}%
 \contentsline {subsubsection}{Invalid User ID}{17}{}%
 \contentsline {subsubsection}{Multiple Shortest Paths}{17}{}%
-\contentsline {chapter}{Conclusion}{19}{}%
+\contentsline {chapter}{Conclusion}{20}{}%

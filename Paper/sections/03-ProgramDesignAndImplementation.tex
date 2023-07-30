@@ -21,6 +21,11 @@ The Network class is a high-level abstraction of the entire network. It contains
 \addcontentsline{toc}{section}{NetworkService and ConsoleService Classes}
 The NetworkService class is the bridge between the underlying Network model and the ConsoleService view. It contains an instance of the Network class and provides methods to execute user commands on the network. The ConsoleService class is responsible for handling user interactions. It provides a command-line interface (CLI) which allows the users to interact with the social network by displaying a menu, accepting input and presenting the results of the various operations.
 
+\subsection*{Relationship Class}
+\addcontentsline{toc}{section}{Relationship Class}
+
+The Relationship class encapsulates the details of a relationship in the social network. Each instance of this class represents a relationship between two users, identified by their respective IDs. The class comprises two main attributes: id, representing the user, and friend, representing the user's friend.
+
 \subsection*{Main Class}
 \addcontentsline{toc}{section}{Main Class}
 The Main class serves as the entry point of the program. It is responsible for starting the application, creating an instance of the ConsoleService and NetworkService classes. It calls the method to start the interface.

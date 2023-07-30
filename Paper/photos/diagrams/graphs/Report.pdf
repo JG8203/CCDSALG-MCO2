@@ -1,0 +1,33 @@
+\documentclass[12pt]{report}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{listings}  % Include the listings package
+\lstset{language=Java}  % Set Java as the default language
+\usepackage[none]{hyphenat}
+\usepackage{svg}
+\setcounter{tocdepth}{3}
+\usepackage{adjustbox}
+\usepackage{caption}
+
+\begin{document}
+
+\include{titlepage}
+
+\tableofcontents
+\newpage
+
+\include{sections/00-Abstract}
+\include{sections/01-Introduction}
+\include{sections/02-Background}
+\include{sections/02-UML}
+\include{sections/03-ProgramDesignAndImplementation}
+\include{sections/04-ProgramOperations}
+\include{sections/05-ProgramInteraction}
+\include{sections/06-TimeComplexity}
+\include{sections/07-ResultsAndDiscussions}
+\include{sections/08-ContributionsAndLearnings}
+\include{sections/09-Conclusion}
+\include{sections/10-References}
+
+\end{document}

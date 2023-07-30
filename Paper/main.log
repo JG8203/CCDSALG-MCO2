@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.6)  31 JUL 2023 05:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.6)  31 JUL 2023 07:45
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -160,13 +160,30 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "main.w18")...executed.
+
+ (./main.w18)
+runsystem(rm -- "main.w18")...executed.
+
 )
 \c@svg@param@lastpage=\count275
 \svg@box=\box54
 \c@svg@param@currpage=\count276
-)
-(/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -336,6 +353,13 @@ Package caption Info: Standard document class detected.
 \c@continuedfloat=\count288
 Package caption Info: listings package is loaded.
 )
+(/usr/local/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count289
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count290
+)
 (./main.aux (./titlepage.aux) (./sections/00-Abstract.aux)
 (./sections/01-Introduction.aux) (./sections/02-Background.aux)
 (./sections/02-UML.aux) (./sections/03-ProgramDesignAndImplementation.aux)
@@ -345,20 +369,20 @@ Package caption Info: listings package is loaded.
 (./sections/10-References.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -396,16 +420,16 @@ LaTeX Font Info:    ... okay on input line 13.
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count289
+\scratchcounter=\count291
 \scratchdimen=\dimen189
 \scratchbox=\box58
-\nofMPsegments=\count290
-\nofMParguments=\count291
+\nofMPsegments=\count292
+\nofMParguments=\count293
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count292
+\MPscratchCnt=\count294
 \MPscratchDim=\dimen190
-\MPnumerator=\count293
-\makeMPintoPDFobject=\count294
+\MPnumerator=\count295
+\makeMPintoPDFobject=\count296
 \everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -416,11 +440,20 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count295
+\c@lstlisting=\count297
+
+(|'inkscape' -V )
+
+Package svg Warning: No version of Inkscape was detected by invoking
+(svg)                `inkscape -V'
+(svg)                so the Inkscape export will fail quite sure as the
+(svg)                command is probably unknown to your OS. You could set
+(svg)                `inkscapeversion=<version>' manually but this is very
+(svg)                unlikely to work on input line 14.
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `titlepage.aux'.
-
 
 (./titlepage.tex
 <photos/logos/dlsu_logo.png, id=4, 385.44pt x 385.44pt>
@@ -457,7 +490,7 @@ h al-lows for constant-time
  []
 
 )
-Overfull \hbox (32.76814pt too wide) in paragraph at lines 11--20
+Overfull \hbox (32.76814pt too wide) in paragraph at lines 11--21
 []\OT1/cmr/bx/n/12 Keywords: \OT1/cmr/m/n/12 Java, pseudo-social net-work, grap
 h-based data struc-ture, HashMaps,
  []
@@ -474,13 +507,13 @@ g graph-based data struc-tures, as well as im-ple-ment
  []
 
 )
-Overfull \hbox (3.12056pt too wide) in paragraph at lines 10--21
+Overfull \hbox (3.12056pt too wide) in paragraph at lines 10--22
 []\OT1/cmr/m/n/12 This pa-per presents an in-depth dis-cus-sion of the de-sign 
 and im-ple-men-ta-tion
  []
 
 
-Overfull \hbox (9.33948pt too wide) in paragraph at lines 10--21
+Overfull \hbox (9.33948pt too wide) in paragraph at lines 10--22
 \OT1/cmr/m/n/12 re-sults ob-tained from an-a-lyz-ing the dataset. We also pro-v
 ide the time com-plex-ity
  []
@@ -567,27 +600,30 @@ enc}]) [13]
 ]) [15]
 \openout2 = `sections/07-ResultsAndDiscussions.aux'.
 
- (./sections/07-ResultsAndDiscussions.tex [16
+ (./sections/07-ResultsAndDiscussions.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 27.
+ [16
 
 
 
-]) [17]
+] [17]) [18]
 \openout2 = `sections/08-ContributionsAndLearnings.aux'.
 
 
 (./sections/08-ContributionsAndLearnings.tex)
-Overfull \hbox (44.73709pt too wide) in paragraph at lines 3--29
+Overfull \hbox (44.73709pt too wide) in paragraph at lines 3--30
 [] 
  []
 
-[18
+[19
 
 
 
 ]
 \openout2 = `sections/09-Conclusion.aux'.
 
- (./sections/09-Conclusion.tex) [19
+ (./sections/09-Conclusion.tex) [20
 
 
 
@@ -600,7 +636,7 @@ Underfull \hbox (badness 1831) in paragraph at lines 4--9
 []\OT1/cmr/m/n/12 Dinesh Ba-jracharya.  A re-view on Java HashMap and TreeMap.
  []
 
-)) [20
+)) [21
 
 
 
@@ -613,13 +649,13 @@ Underfull \hbox (badness 1831) in paragraph at lines 4--9
 (./sections/08-ContributionsAndLearnings.aux) (./sections/09-Conclusion.aux)
 (./sections/10-References.aux)) ) 
 Here is how much of TeX's memory you used:
- 9840 strings out of 476025
- 189752 string characters out of 5790018
+ 10112 strings out of 476025
+ 195604 string characters out of 5790018
  1876388 words of memory out of 5000000
- 30033 multiletter control sequences out of 15000+600000
- 519339 words of font info for 55 fonts, out of 8000000 for 9000
+ 30279 multiletter control sequences out of 15000+600000
+ 520881 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,9n,117p,969b,1154s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,9n,117p,970b,1652s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type
@@ -631,10 +667,10 @@ lic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public
 sfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-s
 uper/sfrm1200.pfb>
-Output written on main.pdf (21 pages, 264723 bytes).
+Output written on main.pdf (22 pages, 270512 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
+ 157 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

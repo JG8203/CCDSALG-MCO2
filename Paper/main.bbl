@@ -7,10 +7,20 @@ Dinesh Bajracharya.
   Technology}, 5(1):134--138, 2020.
 \newblock Published Online May 2020 in IJEAST.
 
+\bibitem{cormen2001introduction}
+T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein.
+\newblock {\em Introduction to Algorithms}.
+\newblock MIT Press, 2001.
+
 \bibitem{HUMMON1990273}
 Norman~P. Hummon and Patrick Doreian.
 \newblock Computational methods for social network analysis.
 \newblock {\em Social Networks}, 12(4):273 -- 288, 1990.
+
+\bibitem{sedgewick2011algorithms}
+R.~Sedgewick and K.~Wayne.
+\newblock {\em Algorithms, 4th Edition}.
+\newblock Addison-Wesley, 2011.
 
 \bibitem{shannon2003cytoscape}
 Paul Shannon, Andrew Markiel, Owen Ozier, Nitin~S Baliga, Jonathan~T Wang,
